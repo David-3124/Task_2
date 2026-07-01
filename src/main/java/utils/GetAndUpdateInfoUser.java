@@ -1,16 +1,17 @@
 package utils;
 
-public class AuthorizationUser {
-
+public class GetAndUpdateInfoUser {
     private String email;
     private String password;
+    private String name;
 
-    public AuthorizationUser(String email, String password) {
+    public GetAndUpdateInfoUser(String email, String password, String name) {
         this.email = email;
         this.password = password;
+        this.name = name;
     }
 
-    public AuthorizationUser() {
+    public GetAndUpdateInfoUser() {
     }
 
     public String getEmail() {
@@ -27,5 +28,13 @@ public class AuthorizationUser {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

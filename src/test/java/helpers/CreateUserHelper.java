@@ -13,7 +13,7 @@ public class CreateUserHelper {
     public static CreateUser createNewUser(String email, String password, String name) {
         CreateUser user = new CreateUser(email, password, name);
         Response response = createUserRequest(user);
-        response.then().statusCode(201).body("ok", equalTo(true));
+        response.then().statusCode(200).body("success", equalTo(true));
         return user;
     }
 
