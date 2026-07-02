@@ -1,5 +1,5 @@
+import Config.BaseUrl;
 import helpers.AuthorizationUserHelper;
-import helpers.BaseUrl;
 import helpers.DeleteUserHelper;
 import helpers.UpdateUserHelper;
 import io.qameta.allure.Step;
@@ -87,9 +87,9 @@ public class UpdateUserTest extends BaseUrl {
         String existingPassword;
 
         int newRandom = new Random().nextInt(1000);
-        existingEmail = "email_" + newRandom + "@yandex.ru";
-        existingPassword = "Pass_" + newRandom;
-        String existingName = "Name_" + newRandom;
+        existingEmail = "email_e" + newRandom + "@yandex.ru";
+        existingPassword = "Pass_p" + newRandom;
+        String existingName = "Name_n" + newRandom;
         createNewUser(existingEmail, existingPassword, existingName);
 
         GetAndUpdateInfoUser updateData = new GetAndUpdateInfoUser();
@@ -101,7 +101,6 @@ public class UpdateUserTest extends BaseUrl {
                 .body("success", equalTo(false))
                 .body("message", equalTo("User with such email already exists"));
     }
-
 
     @AfterEach
     @Step("Очистка данных после выполнения тест кейса")

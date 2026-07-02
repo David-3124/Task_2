@@ -1,5 +1,6 @@
 package helpers;
 
+import Config.Endpoints;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import utils.AuthorizationUser;
@@ -15,7 +16,7 @@ public class AuthorizationUserHelper {
                 .header("Content-Type", "application/json")
                 .body(authorization)
                 .when()
-                .post(EndpointHelper.LOGIN_ENDPOINT);
+                .post(Endpoints.LOGIN_ENDPOINT);
 
         if (response.statusCode() == 200) {
             return response.path("accessToken");

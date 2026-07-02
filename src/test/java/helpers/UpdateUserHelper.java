@@ -1,5 +1,6 @@
 package helpers;
 
+import Config.Endpoints;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import utils.GetAndUpdateInfoUser;
@@ -15,7 +16,7 @@ public class UpdateUserHelper {
                 .header("Authorization", accessToken)
                 .body(userData)
                 .when()
-                .patch(EndpointHelper.USER_ENDPOINT);
+                .patch(Endpoints.USER_ENDPOINT);
     }
 
     @Step("Обновление данных пользователя без авторизации")
@@ -24,6 +25,6 @@ public class UpdateUserHelper {
                 .header("Content-Type", "application/json")
                 .body(userData)
                 .when()
-                .patch(EndpointHelper.USER_ENDPOINT);
+                .patch(Endpoints.USER_ENDPOINT);
     }
 }

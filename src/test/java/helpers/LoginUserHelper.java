@@ -1,5 +1,6 @@
 package helpers;
 
+import Config.Endpoints;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import utils.LoginUser;
@@ -14,6 +15,6 @@ public class LoginUserHelper {
                 .header("Content-type", "application/json")
                 .body(loginUser)
                 .when()
-                .post(EndpointHelper.LOGIN_ENDPOINT);
+                .post(Endpoints.LOGIN_ENDPOINT);
     }
 }

@@ -1,5 +1,6 @@
 package helpers;
 
+import Config.Endpoints;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import utils.CreateUser;
@@ -17,13 +18,12 @@ public class CreateUserHelper {
         return user;
     }
 
-
     @Step("Запроса на создание нового пользователя")
     public static Response createUserRequest(CreateUser user) {
         return given()
                 .header("Content-type", "application/json")
                 .body(user)
                 .when()
-                .post(EndpointHelper.CREATE_USER_ENDPOINT);
+                .post(Endpoints.CREATE_USER_ENDPOINT);
     }
 }

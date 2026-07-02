@@ -1,5 +1,5 @@
+import Config.BaseUrl;
 import helpers.AuthorizationUserHelper;
-import helpers.BaseUrl;
 import helpers.DeleteUserHelper;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
