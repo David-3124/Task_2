@@ -1,6 +1,6 @@
 package helpers;
 
-import Config.Endpoints;
+import config.Endpoints;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import utils.LoginUser;

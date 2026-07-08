@@ -1,4 +1,4 @@
-import Config.BaseUrl;
+import config.BaseUrl;
 import helpers.*;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;

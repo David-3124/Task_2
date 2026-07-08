@@ -1,4 +1,4 @@
-import Config.BaseUrl;
+import config.BaseUrl;
 import helpers.AuthorizationUserHelper;
 import helpers.DeleteUserHelper;
 import io.qameta.allure.Step;
